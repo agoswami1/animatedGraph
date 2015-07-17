@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="animatedGraph" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5W5-qz-wd7" customClass="PieView" customModule="animatedGraph" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-47" width="600" height="572"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oe2-0d-NTh">
+                                <rect key="frame" x="249" y="550" width="57" height="30"/>
+                                <state key="normal" title="Animate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateGraph:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FdB-h6-TKV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5W5-qz-wd7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="6Pc-ao-Rei"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Oe2-0d-NTh" secondAttribute="bottom" constant="20" id="99v-HD-V60"/>
+                            <constraint firstItem="Oe2-0d-NTh" firstAttribute="top" secondItem="5W5-qz-wd7" secondAttribute="bottom" constant="25" id="ISn-co-yc9"/>
+                            <constraint firstAttribute="centerX" secondItem="Oe2-0d-NTh" secondAttribute="centerX" constant="22.5" id="KIB-iK-Pil"/>
+                            <constraint firstAttribute="trailing" secondItem="5W5-qz-wd7" secondAttribute="trailing" id="XLS-og-W8N"/>
+                            <constraint firstItem="5W5-qz-wd7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j61-s8-tGC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pieView" destination="5W5-qz-wd7" id="ASc-m4-B2n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
